@@ -6,7 +6,7 @@ export async function deletesurvey(userdata:any,body:any) {
             return { message: "data is required", data: null };
         }
     try{
-          const user =await prisma.survey.delete({where:{id:body.surveyQuestionId}})
+          const user =await prisma.survey.delete({where:{id:body.surveyId}})
           console.log(user)
          return {message:"deletion successful",data:user}
     }

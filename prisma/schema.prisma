@@ -253,7 +253,7 @@ model OptionsQuestion {
   optionId   Int
   questionId Int
   option     Options        @relation(fields: [optionId], references: [id])
-  question   SurveyQuestion @relation(fields: [questionId], references: [id])
+  question   SurveyQuestion @relation(fields: [questionId], references: [id],onDelete: Cascade)
 }
 
 model OtherValue {
